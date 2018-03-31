@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Customer Registration</title>
+	<script type="text/javascript" src="script/script.js">
+	</script>
+	<script type="text/javascript">
+    $(document).ready(function()
+    {
+    	$("input:submit").click(function()
+    	{
+    		name=$("input[name='txt_customer_name']").val()
+    		;
+    		if(name=="") 
+    		{
+    			alert("Please Enter Your Name");
+    	    }
+
+        {
+    		password=$("input[name='txt_password']").val();
+
+            if(password=="")
+            {
+    			alert("Please Enter Valid password")
+    		}
+    		{
+    			Gender=$("input[name='radio_gender']").val();
+    			if(Gender=="")
+    			{
+    				alert("Please Enter Gender");
+    			}
+    			{
+    				Address=$("input[name='txt_address']").val();
+    				if(Address=="")
+    				{
+    					alert("Please Enter Valid Address")
+    				}
+    			}
+
+
+    		}
+    	}
+    	});
+    });
+
+
+	</script>
+	
+</head>
+<body><form name="frm_register" method="" action="">	<table align="center" cellpadding="10" width="500"><tr><th colspan="2" >Customer Registration</th><th></th></tr>
+		<tr><td>Customer Name</td><td><input type="text" name="txt_customer_name" size="50"></td></tr>
+		<tr><td>Password</td><td><input type="text" name="txt_password" size="50"></td></tr>
+		<tr><td>Gender</td><td><input type="radio" name="radio_gender"> Male<input type="radio" name="radio_gender"> Female</td></tr>
+		<tr><td>Address</td><td><textarea rows="5" name="txt_address" cols="20" size="50"></textarea></td></tr>
+		<tr><td>Phone Number</td><td><input type="text" name="txt_phone_Number"></td></tr>
+		<tr><td>Hobbies</td><td><select>
+			<option value="t">Travel
+			<option value="R" selected>reading
+			<option value="S">Sleeping
+			<option value="W">Walking
+			</select></td></tr>
+			<tr><td colspan="2" align="center"><input type="submit" name="cmdsubmit" value="Submit" onclick="return validate()"></td> <td> </td></tr>
+
+	</table></form>
+</td>
+</body>
+</html>
